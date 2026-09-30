@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ban.hana 개인정보처리방침</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; line-height: 1.65; color: #20251f; background: #f7f8f4; }
+    body { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    main { background: #fff; border: 1px solid #dfe4d9; border-radius: 14px; padding: clamp(1.25rem, 4vw, 2.5rem); }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin-top: 0; }
+    h2 { margin-top: 2rem; font-size: 1.15rem; }
+    .draft { padding: .75rem 1rem; background: #fff5d9; border-left: 4px solid #b47b00; }
+    .meta { color: #596157; }
+    a { color: #285f48; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="draft">Ban.hana는 현재 Instagram 자동응답 연결을 준비 중입니다. 이 안내는 현재 처리 방식과 향후 계획을 구분하며, 실제 운영 방식이 변경되면 갱신합니다.</p>
+  <h1>Ban.hana 개인정보처리방침</h1>
+  <p class="meta">작성일: 2026-09-30 · 운영자: Ban.hana · Instagram 계정: @banhana_02</p>
+
+  <h2>현재 준비 단계</h2>
+  <p>현재 준비 중인 임시 수신기는 POST 알림의 서명을 확인하고 접수 응답을 보내도록 구성되어 있습니다. Meta의 callback GET 검증은 아직 성공하지 않았습니다. 받은 댓글·DM 본문은 디스크에 저장하지 않으며, 실계정 자동응답은 아직 시작하지 않았습니다. 별도의 모의 테스트는 가짜 입력만 로컬 저장소에 기록하며 Instagram 계정과 연결되어 있지 않습니다.</p>
+
+  <h2>향후 자동화에서 다룰 수 있는 정보</h2>
+  <p>실제 연결이 별도로 승인되고 준비되면, 지정된 게시물의 키워드 댓글에 비공개 답장을 보내고 READY 메시지와 팔로우 여부를 확인해 링크를 전달하는 데 필요한 정보만 처리할 예정입니다.</p>
+  <ul>
+    <li>계정·안내 정보: Instagram 계정 및 게시물 식별번호, 안내 설정과 Notion 링크.</li>
+    <li>이벤트 정보: 댓글·메시지 식별번호, Instagram 사용자 식별번호와 이벤트 시각.</li>
+    <li>본문: 댓글에서 키워드, 받은 DM에서 READY 여부를 메모리에서 확인합니다. 받은 전체 본문은 저장하지 않을 계획입니다. 답장 문구와 링크는 Meta를 통해 수신자에게 전달됩니다.</li>
+    <li>진행 정보: 팔로우 확인 처리 상태, 처리 단계, 메시지 식별번호와 성공·실패 여부 및 처리 시각.</li>
+  </ul>
+  <p>이 항목은 예정된 처리 범위입니다. 실제 수집·저장 필드는 연결 전에 다시 검토하며, 현재 동작을 설명하는 목록이 아닙니다.</p>
+
+  <h2>이용 목적과 전달 대상</h2>
+  <p>목적은 지정된 댓글에 안내 답장을 보내고, READY 답장 후 팔로우를 확인해 조건을 충족한 경우 요청한 Notion 링크를 전달하는 것입니다. 운영자는 광고 타게팅이나 데이터 판매를 하지 않을 계획입니다.</p>
+  <p>실제 연결 시 Meta/Instagram은 메시지 API와 계정 서비스 제공자로서 요청 및 전달 메시지를 처리합니다. Notion 페이지는 별도 서비스이며, 링크를 연 사람의 접속·계정 정보는 Notion의 정책과 설정에 따릅니다. 테스트에 임시 Cloudflare HTTPS 터널을 사용할 경우 Cloudflare가 요청을 전달하는 중개자가 되며, 연결 정보와 제공자 로그는 해당 서비스의 정책에 따를 수 있습니다. 이 안내 페이지는 GitHub Pages를 통해 공개되며, 방문자의 접속 정보는 GitHub의 개인정보처리방침에 따라 처리될 수 있습니다.</p>
+
+  <h2>보관과 삭제</h2>
+  <p>현재 임시 수신기는 요청 본문을 디스크에 보관하지 않습니다. 모의 테스트에서는 가짜 이벤트 기록이 로컬 저장소에 남을 수 있습니다. 실제 자동응답을 별도로 연결하면 필요한 사용자·댓글·메시지 식별번호, 시각과 처리 결과를 로컬에 보관할 예정입니다. 받은 전체 댓글·DM 본문은 처리 후 보관하지 않을 계획입니다.</p>
+  <p>향후 보관 기준은 안내 캠페인을 종료 처리한 뒤 90일로 계획하고 있습니다. 기록 삭제는 운영자가 직접 삭제 작업을 실행해야 하며, 자동으로 삭제되지는 않습니다. 실제 운영 전에 기록별 보관 기간과 삭제 절차를 확인해 이 안내를 갱신하겠습니다. 삭제 요청 방법은 <a href="data-deletion.html">데이터 삭제 안내</a>를 참고하세요.</p>
+
+  <h2>문의</h2>
+  <p>개인정보 문의 및 로컬에 보유한 정보의 삭제 요청: <a href="mailto:evilmuff0805@gmail.com">evilmuff0805@gmail.com</a>. 비밀번호, 앱 시크릿, access token 또는 전체 DM 대화는 보내지 마세요.</p>
+</main>
+</body>
+</html>
